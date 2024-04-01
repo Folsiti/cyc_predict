@@ -15,15 +15,6 @@ def read_tsv(filename, quotechar=None):
 def flatten(l):
     return [item for sublist in l for item in sublist]
 
-def read_cvs() :
-    pf = pd.read_csv("D:\毕设\CycPeptMPDB_Peptide_All.csv")
-    tokens = pf.Sequence
-    print(tokens)
-    labels = pf.Molecule_Shape
-    data = {'tokens':tokens,'labels':labels}
-    df = pd.DataFrame(data=data)
-    return df
-
 def read_txt(filename, idx=1):
     # read file
     lines =  open(filename).read().strip()
